@@ -62,19 +62,15 @@ Article.updateOne(
 // { $set : {employees: 66000} },
 // { active: false},
 // { $set : {active: true}},
-{ products: ['computers']},
-{ $set : {products:['computers', 'phones', 'tablets']}},
-
-    (err, response) =>{
-        console.log(response);//if action was sucessful
-    }
-);
-    
-   
-    
-    // { CEO:{name:'Steve Jobs', age:21}},
-    // { $set : {CEO:{name: 'Time Cook', age:56}},
-    
+// { products: ['computers']},
+// { $set : {products:['computers', 'phones', 'tablets']}},
+// { CEO:{name:'Steve Jobs', age:21}},
+// { $set : {CEO:{name: 'Time Cook', age:56}},
+// },
+//     (err, response) =>{
+//         console.log(response);//if action was sucessful
+//     }
+// ); 
 // Article.find({employees: 'Apple Inc', employees:'Google'},
 //  (err, foundArticle) =>{
 //     if(err){
@@ -84,10 +80,13 @@ Article.updateOne(
 //         console.log(foundArticle);
 //     }
 // });
-// Article.remove(
-//     { name: 'Apple Inc'},
-//     { name: 'Google'},
-//     (err, response) =>{
-//         console.log(response); //if it worked
-//     }
-// );
+Article.remove(
+    //{ name: 'Apple Inc'},
+    //{ name: 'Apple'},
+    { name: 'Google'},
+    (err, response) =>{
+        console.log(response); //if it worked
+    }
+));
+
+//db.articles.find().pretty() in mongo
