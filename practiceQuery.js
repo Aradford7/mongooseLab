@@ -60,8 +60,10 @@ Article.updateOne(
 // { $set : {name: 'Apple Inc'}},
 // { employees: 2},
 // { $set : {employees: 66000} },
-{ active: false},
-{ $set : {active: true}},
+// { active: false},
+// { $set : {active: true}},
+{ products: ['computers']},
+{ $set : {products:['computers', 'phones', 'tablets']}},
 
     (err, response) =>{
         console.log(response);//if action was sucessful
@@ -69,8 +71,7 @@ Article.updateOne(
 );
     
    
-    // { products: ['computers']},
-    // { $set : {products:['computers', 'phones', 'tablets']}},
+    
     // { CEO:{name:'Steve Jobs', age:21}},
     // { $set : {CEO:{name: 'Time Cook', age:56}},
     
