@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 
 //create schema
 const articleSchema = new mongoose.Schema({
-    name: {type:String, required:true, unique:true},
-    employees: {type:Number, required:true,},
-    founded: {type:Date, default:Date.now},
+    name: {type:String, required:true},
+    founded: Date,
+    employees: {type:Number},
     active: Boolean,
+    products: [String],
     CEO: {
         name: String,
         age: Number,
