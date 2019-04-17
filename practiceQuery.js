@@ -12,14 +12,25 @@ Article.create({
     CEO: {
         name: 'Steve Jobs',
         age: 21,}
-}, (err, createArticle) => {
+}, 
+Article.create({
+    name: 'Google',
+    founded: 'September 4, 1998',
+    employees: 57100,
+    active: true,
+    products:['search','maps','email'],
+    CEO: {
+        name: 'Larry Page',
+        age: 43,}
+},
+(err, createArticle) => {
     if (err){
         console.log(err);
     }
     else{
         console.log(createArticle);
     }
-});
+}));
 
 // name: {type:String, required:true, unique:true},
 // employees: {type:Number, required:true,},
