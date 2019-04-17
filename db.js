@@ -5,6 +5,7 @@ const connectionString = 'mongodb://localhost/test';
 mongoose.connect(connectionString,{
     useNewUrlParser:true,
     useCreateIndex:true,
+    //useUpdateIndex:true,   //callback?
 });
 
 mongoose.connection.on('connected', ()=>{
